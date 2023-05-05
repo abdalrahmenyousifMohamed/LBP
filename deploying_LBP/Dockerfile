@@ -1,15 +1,4 @@
 FROM python:3.9-slim
-# install utilities
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y curl
-
-ENV CONDA_AUTO_UPDATE_CONDA=false \
-    PATH=/opt/miniconda/bin:$PATH
-RUN curl -sLo ~/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-py38_4.9.2-Linux-x86_64.sh \
-    && chmod +x ~/miniconda.sh \
-    && ~/miniconda.sh -b -p /opt/miniconda \
-    && rm ~/miniconda.sh \
-    && sed -i "$ a PATH=/opt/miniconda/bin:\$PATH" /etc/environment
 
 # Installing python dependencies
 RUN python3 -m pip --no-cache-dir install --upgrade pip && \
