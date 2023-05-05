@@ -1,5 +1,4 @@
-#FROM nvidia/cuda:11.2.0-runtime-ubuntu20.04
-
+FROM python:3.9-slim
 # install utilities
 RUN apt-get update && \
     apt-get install --no-install-recommends -y curl
