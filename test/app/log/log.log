@@ -1,0 +1,725 @@
+[2023-05-01 23:46:53,694] INFO [52873-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app']
+[2023-05-01 23:46:53,695] WARNING [52873-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-01 23:46:53,695] INFO [52873-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-01 23:46:53,695] INFO [52873-8178467136] Started reloader process [52873] using StatReload
+[2023-05-01 23:46:54,458] INFO [52875-8178467136] Started server process [52875]
+[2023-05-01 23:46:54,458] INFO [52875-8178467136] Waiting for application startup.
+[2023-05-01 23:46:54,459] ERROR [52875-8178467136] Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app/main.py", line 63, in startup_event
+    logger.info('Running envirnoment: {}'.format(CONFIG['ENV']))
+NameError: name 'CONFIG' is not defined
+
+[2023-05-01 23:46:54,459] ERROR [52875-8178467136] Application startup failed. Exiting.
+[2023-05-01 23:47:38,798] WARNING [52873-8178467136] StatReload detected changes in 'main.py'. Reloading...
+[2023-05-01 23:47:39,311] INFO [52878-8178467136] Started server process [52878]
+[2023-05-01 23:47:39,311] INFO [52878-8178467136] Waiting for application startup.
+[2023-05-01 23:47:39,311] INFO [52878-8178467136] Running envirnoment: development
+[2023-05-01 23:47:39,311] INFO [52878-8178467136] PyTorch using device: cpu
+[2023-05-01 23:47:39,314] ERROR [52878-8178467136] Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app/main.py", line 68, in startup_event
+    model.load_state_dict(torch.load(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/model/model.pt'
+
+[2023-05-01 23:47:39,314] ERROR [52878-8178467136] Application startup failed. Exiting.
+[2023-05-01 23:48:17,010] WARNING [52873-8178467136] StatReload detected changes in 'config.py'. Reloading...
+[2023-05-01 23:48:17,521] INFO [52886-8178467136] Started server process [52886]
+[2023-05-01 23:48:17,521] INFO [52886-8178467136] Waiting for application startup.
+[2023-05-01 23:48:17,522] INFO [52886-8178467136] Running envirnoment: development
+[2023-05-01 23:48:17,522] INFO [52886-8178467136] PyTorch using device: cpu
+[2023-05-01 23:48:17,524] ERROR [52886-8178467136] Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app/main.py", line 74, in startup_event
+    "scaler": load(CONFIG['SCALAR_PATH']),  # joblib.load
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/model/scalar.joblib'
+
+[2023-05-01 23:48:17,524] ERROR [52886-8178467136] Application startup failed. Exiting.
+[2023-05-01 23:48:19,565] WARNING [52873-8178467136] StatReload detected changes in 'config.py'. Reloading...
+[2023-05-01 23:48:20,056] INFO [52888-8178467136] Started server process [52888]
+[2023-05-01 23:48:20,056] INFO [52888-8178467136] Waiting for application startup.
+[2023-05-01 23:48:20,056] INFO [52888-8178467136] Running envirnoment: development
+[2023-05-01 23:48:20,056] INFO [52888-8178467136] PyTorch using device: cpu
+[2023-05-01 23:48:20,057] ERROR [52888-8178467136] Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app/main.py", line 74, in startup_event
+    "scaler": load(CONFIG['SCALAR_PATH']),  # joblib.load
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../model/scalar.joblib'
+
+[2023-05-01 23:48:20,057] ERROR [52888-8178467136] Application startup failed. Exiting.
+[2023-05-01 23:48:43,426] WARNING [52873-8178467136] StatReload detected changes in 'config.py'. Reloading...
+[2023-05-01 23:48:43,926] INFO [52889-8178467136] Started server process [52889]
+[2023-05-01 23:48:43,926] INFO [52889-8178467136] Waiting for application startup.
+[2023-05-01 23:48:43,926] INFO [52889-8178467136] Running envirnoment: development
+[2023-05-01 23:48:43,926] INFO [52889-8178467136] PyTorch using device: cpu
+[2023-05-01 23:48:43,927] ERROR [52889-8178467136] Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 677, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 566, in __aenter__
+    await self._router.startup()
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 654, in startup
+    await handler()
+  File "/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app/main.py", line 74, in startup_event
+    "scaler": load(CONFIG['SCALAR_PATH']),  # joblib.load
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/joblib/numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../model/scalar.joblib'
+
+[2023-05-01 23:48:43,927] ERROR [52889-8178467136] Application startup failed. Exiting.
+[2023-05-01 23:48:59,599] WARNING [52873-8178467136] StatReload detected changes in 'config.py'. Reloading...
+[2023-05-01 23:49:00,078] INFO [52890-8178467136] Started server process [52890]
+[2023-05-01 23:49:00,078] INFO [52890-8178467136] Waiting for application startup.
+[2023-05-01 23:49:00,078] INFO [52890-8178467136] Running envirnoment: development
+[2023-05-01 23:49:00,078] INFO [52890-8178467136] PyTorch using device: cpu
+[2023-05-01 23:49:00,502] INFO [52890-8178467136] Application startup complete.
+[2023-05-01 23:58:14,980] INFO [52890-8178467136] 127.0.0.1:60553 - "GET / HTTP/1.1" 404
+[2023-05-01 23:58:15,008] INFO [52890-8178467136] 127.0.0.1:60553 - "GET /favicon.ico HTTP/1.1" 404
+[2023-05-01 23:58:47,715] INFO [52890-8178467136] Shutting down
+[2023-05-01 23:58:47,819] INFO [52890-8178467136] Waiting for application shutdown.
+[2023-05-01 23:58:47,820] INFO [52890-8178467136] Application shutdown complete.
+[2023-05-01 23:58:47,821] INFO [52890-8178467136] Finished server process [52890]
+[2023-05-01 23:58:47,952] INFO [52873-8178467136] Stopping reloader process [52873]
+[2023-05-01 23:59:07,797] INFO [52934-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app']
+[2023-05-01 23:59:07,798] INFO [52934-8178467136] Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+[2023-05-01 23:59:07,798] INFO [52934-8178467136] Started reloader process [52934] using StatReload
+[2023-05-01 23:59:08,285] INFO [52936-8178467136] Started server process [52936]
+[2023-05-01 23:59:08,285] INFO [52936-8178467136] Waiting for application startup.
+[2023-05-01 23:59:08,285] INFO [52936-8178467136] Running envirnoment: development
+[2023-05-01 23:59:08,285] INFO [52936-8178467136] PyTorch using device: cpu
+[2023-05-01 23:59:08,640] INFO [52936-8178467136] Application startup complete.
+[2023-05-01 23:59:13,874] INFO [52936-8178467136] 127.0.0.1:60561 - "GET / HTTP/1.1" 404
+[2023-05-01 23:59:18,113] INFO [52936-8178467136] 127.0.0.1:60561 - "GET / HTTP/1.1" 404
+[2023-05-01 23:59:54,450] INFO [52936-8178467136] Shutting down
+[2023-05-01 23:59:54,553] INFO [52936-8178467136] Waiting for application shutdown.
+[2023-05-01 23:59:54,554] INFO [52936-8178467136] Application shutdown complete.
+[2023-05-01 23:59:54,555] INFO [52936-8178467136] Finished server process [52936]
+[2023-05-01 23:59:54,687] INFO [52934-8178467136] Stopping reloader process [52934]
+[2023-05-02 00:07:52,425] INFO [52967-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying /app']
+[2023-05-02 00:07:52,426] WARNING [52967-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-02 00:07:52,426] INFO [52967-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-02 00:07:52,426] INFO [52967-8178467136] Started reloader process [52967] using StatReload
+[2023-05-02 00:07:53,187] INFO [52969-8178467136] Started server process [52969]
+[2023-05-02 00:07:53,187] INFO [52969-8178467136] Waiting for application startup.
+[2023-05-02 00:07:53,187] INFO [52969-8178467136] Running envirnoment: development
+[2023-05-02 00:07:53,187] INFO [52969-8178467136] PyTorch using device: cpu
+[2023-05-02 00:07:53,616] INFO [52969-8178467136] Application startup complete.
+[2023-05-02 00:08:03,706] INFO [52969-8178467136] 127.0.0.1:60614 - "GET / HTTP/1.1" 404
+[2023-05-02 00:08:03,769] INFO [52969-8178467136] 127.0.0.1:60614 - "GET /favicon.ico HTTP/1.1" 404
+[2023-05-02 00:08:57,347] INFO [52969-8178467136] 127.0.0.1:60630 - "GET /static HTTP/1.1" 307
+[2023-05-02 00:08:57,372] INFO [52969-8178467136] 127.0.0.1:60630 - "GET / HTTP/1.1" 404
+[2023-05-02 00:09:22,289] INFO [52969-8178467136] 127.0.0.1:60631 - "GET /about/ HTTP/1.1" 307
+[2023-05-02 00:09:22,330] INFO [52969-8178467136] 127.0.0.1:60631 - "GET /about HTTP/1.1" 200
+[2023-05-02 00:09:44,066] INFO [52969-8178467136] 127.0.0.1:60633 - "GET /api/v1/predict HTTP/1.1" 405
+[2023-05-02 00:10:03,727] INFO [52969-8178467136] 127.0.0.1:60636 - "GET /startup HTTP/1.1" 404
+[2023-05-02 00:11:04,954] INFO [52969-8178467136] 127.0.0.1:60639 - "GET /docs HTTP/1.1" 200
+[2023-05-02 00:11:05,901] INFO [52969-8178467136] 127.0.0.1:60639 - "GET /openapi.json HTTP/1.1" 200
+[2023-05-02 00:14:39,868] INFO [52969-6243758080] API predict called
+[2023-05-02 00:14:39,869] INFO [52969-6243758080] input: sepal_length=3.1 sepal_width=3.5 petal_length=3.4 petal_width=3.0
+[2023-05-02 00:14:39,876] INFO [52969-6243758080] results: {'setosa': 0.008124, 'versicolor': 0.030669, 'virginica': 0.961207, 'pred': 'virginica'}
+[2023-05-02 00:14:39,878] INFO [52969-8178467136] 127.0.0.1:60649 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-02 00:18:34,048] INFO [52969-6243758080] API predict called
+[2023-05-02 00:18:34,048] INFO [52969-6243758080] input: sepal_length=3.1 sepal_width=3.5 petal_length=3.4 petal_width=3.0
+[2023-05-02 00:18:34,049] INFO [52969-6243758080] results: {'setosa': 0.008124, 'versicolor': 0.030669, 'virginica': 0.961207, 'pred': 'virginica'}
+[2023-05-02 00:18:34,050] INFO [52969-8178467136] 127.0.0.1:60660 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-02 00:19:55,140] INFO [52969-8178467136] 127.0.0.1:60663 - "GET /about HTTP/1.1" 200
+[2023-05-02 00:24:00,355] INFO [52969-8178467136] Shutting down
+[2023-05-02 00:24:00,462] INFO [52969-8178467136] Waiting for application shutdown.
+[2023-05-02 00:24:00,463] INFO [52969-8178467136] Application shutdown complete.
+[2023-05-02 00:24:00,464] INFO [52969-8178467136] Finished server process [52969]
+[2023-05-02 00:24:00,623] INFO [52967-8178467136] Stopping reloader process [52967]
+[2023-05-02 07:11:46,391] INFO [64086-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying_LBP/app']
+[2023-05-02 07:11:46,392] WARNING [64086-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-02 07:11:46,392] INFO [64086-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-02 07:11:46,392] INFO [64086-8178467136] Started reloader process [64086] using StatReload
+[2023-05-02 07:11:46,987] INFO [64088-8178467136] Started server process [64088]
+[2023-05-02 07:11:46,987] INFO [64088-8178467136] Waiting for application startup.
+[2023-05-02 07:11:46,988] INFO [64088-8178467136] Running envirnoment: development
+[2023-05-02 07:11:46,988] INFO [64088-8178467136] PyTorch using device: cpu
+[2023-05-02 07:11:47,334] INFO [64088-8178467136] Application startup complete.
+[2023-05-02 07:11:58,464] INFO [64088-8178467136] 127.0.0.1:62245 - "GET / HTTP/1.1" 404
+[2023-05-02 07:11:58,488] INFO [64088-8178467136] 127.0.0.1:62245 - "GET /favicon.ico HTTP/1.1" 404
+[2023-05-02 07:11:58,516] INFO [64088-8178467136] 127.0.0.1:62246 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404
+[2023-05-02 07:11:58,518] INFO [64088-8178467136] 127.0.0.1:62246 - "GET /apple-touch-icon.png HTTP/1.1" 404
+[2023-05-02 07:12:03,354] INFO [64088-8178467136] 127.0.0.1:62245 - "GET /docs HTTP/1.1" 200
+[2023-05-02 07:12:04,124] INFO [64088-8178467136] 127.0.0.1:62245 - "GET /openapi.json HTTP/1.1" 200
+[2023-05-02 07:12:13,128] INFO [64088-8178467136] 127.0.0.1:62247 - "POST /api/v1/predict HTTP/1.1" 422
+[2023-05-02 07:12:15,381] INFO [64088-8178467136] 127.0.0.1:62247 - "POST /api/v1/predict HTTP/1.1" 422
+[2023-05-02 07:12:16,059] INFO [64088-8178467136] 127.0.0.1:62247 - "POST /api/v1/predict HTTP/1.1" 422
+[2023-05-02 07:13:27,979] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:13:28,028] INFO [64088-8178467136] Shutting down
+[2023-05-02 07:13:28,131] INFO [64088-8178467136] Waiting for application shutdown.
+[2023-05-02 07:13:28,133] INFO [64088-8178467136] Application shutdown complete.
+[2023-05-02 07:13:28,133] INFO [64088-8178467136] Finished server process [64088]
+[2023-05-02 07:13:28,779] INFO [64100-8178467136] Started server process [64100]
+[2023-05-02 07:13:28,780] INFO [64100-8178467136] Waiting for application startup.
+[2023-05-02 07:13:28,780] INFO [64100-8178467136] Running envirnoment: development
+[2023-05-02 07:13:28,780] INFO [64100-8178467136] PyTorch using device: cpu
+[2023-05-02 07:13:29,065] INFO [64100-8178467136] Application startup complete.
+[2023-05-02 07:13:41,846] INFO [64100-6170931200] API predict called
+[2023-05-02 07:13:41,847] INFO [64100-6170931200] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:13:41,850] INFO [64100-6170931200] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:13:41,852] ERROR [64100-8178467136] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://127.0.0.1:8080/api/v1/predict",
+    "headers": "Headers({'host': '127.0.0.1:8080', 'content-type': 'application/json', 'origin': 'http://127.0.0.1:8080', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'accept': 'application/json', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15', 'referer': 'http://127.0.0.1:8080/docs', 'content-length': '365', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2023-05-02 07:13:41,854] INFO [64100-8178467136] 127.0.0.1:62256 - "POST /api/v1/predict HTTP/1.1" 500
+[2023-05-02 07:13:41,854] ERROR [64100-8178467136] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 429, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 86, in __call__
+    raise exc from None
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 82, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 255, in app
+    content = await serialize_response(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 141, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for InferenceResponse
+response -> results -> setosa
+  field required (type=value_error.missing)
+[2023-05-02 07:14:31,674] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:14:31,733] INFO [64100-8178467136] Shutting down
+[2023-05-02 07:14:31,835] INFO [64100-8178467136] Waiting for application shutdown.
+[2023-05-02 07:14:31,836] INFO [64100-8178467136] Application shutdown complete.
+[2023-05-02 07:14:31,837] INFO [64100-8178467136] Finished server process [64100]
+[2023-05-02 07:14:32,413] INFO [64105-8178467136] Started server process [64105]
+[2023-05-02 07:14:32,413] INFO [64105-8178467136] Waiting for application startup.
+[2023-05-02 07:14:32,413] INFO [64105-8178467136] Running envirnoment: development
+[2023-05-02 07:14:32,413] INFO [64105-8178467136] PyTorch using device: cpu
+[2023-05-02 07:14:32,717] INFO [64105-8178467136] Application startup complete.
+[2023-05-02 07:14:43,626] INFO [64105-6203273216] API predict called
+[2023-05-02 07:14:43,626] INFO [64105-6203273216] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:14:43,629] INFO [64105-6203273216] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:14:43,630] ERROR [64105-8178467136] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://127.0.0.1:8080/api/v1/predict",
+    "headers": "Headers({'host': '127.0.0.1:8080', 'content-type': 'application/json', 'origin': 'http://127.0.0.1:8080', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'accept': 'application/json', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15', 'referer': 'http://127.0.0.1:8080/docs', 'content-length': '365', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2023-05-02 07:14:43,632] INFO [64105-8178467136] 127.0.0.1:62259 - "POST /api/v1/predict HTTP/1.1" 500
+[2023-05-02 07:14:43,633] ERROR [64105-8178467136] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 429, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 86, in __call__
+    raise exc from None
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 82, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 255, in app
+    content = await serialize_response(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 141, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for InferenceResponse
+response -> results -> setosa
+  field required (type=value_error.missing)
+[2023-05-02 07:14:46,423] INFO [64105-6203273216] API predict called
+[2023-05-02 07:14:46,424] INFO [64105-6203273216] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:14:46,425] INFO [64105-6203273216] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:14:46,427] ERROR [64105-8178467136] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://127.0.0.1:8080/api/v1/predict",
+    "headers": "Headers({'host': '127.0.0.1:8080', 'content-type': 'application/json', 'origin': 'http://127.0.0.1:8080', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'accept': 'application/json', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15', 'referer': 'http://127.0.0.1:8080/docs', 'content-length': '365', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2023-05-02 07:14:46,428] INFO [64105-8178467136] 127.0.0.1:62260 - "POST /api/v1/predict HTTP/1.1" 500
+[2023-05-02 07:14:46,428] ERROR [64105-8178467136] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 429, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 86, in __call__
+    raise exc from None
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 82, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 255, in app
+    content = await serialize_response(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 141, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for InferenceResponse
+response -> results -> setosa
+  field required (type=value_error.missing)
+[2023-05-02 07:14:47,565] INFO [64105-6203273216] API predict called
+[2023-05-02 07:14:47,566] INFO [64105-6203273216] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:14:47,567] INFO [64105-6203273216] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:14:47,568] ERROR [64105-8178467136] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://127.0.0.1:8080/api/v1/predict",
+    "headers": "Headers({'host': '127.0.0.1:8080', 'content-type': 'application/json', 'origin': 'http://127.0.0.1:8080', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'accept': 'application/json', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15', 'referer': 'http://127.0.0.1:8080/docs', 'content-length': '365', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2023-05-02 07:14:47,569] INFO [64105-8178467136] 127.0.0.1:62261 - "POST /api/v1/predict HTTP/1.1" 500
+[2023-05-02 07:14:47,570] ERROR [64105-8178467136] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 429, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 86, in __call__
+    raise exc from None
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 82, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 255, in app
+    content = await serialize_response(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 141, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for InferenceResponse
+response -> results -> setosa
+  field required (type=value_error.missing)
+[2023-05-02 07:15:04,736] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:15:04,757] INFO [64105-8178467136] Shutting down
+[2023-05-02 07:15:04,858] INFO [64105-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:04,859] INFO [64105-8178467136] Application shutdown complete.
+[2023-05-02 07:15:04,859] INFO [64105-8178467136] Finished server process [64105]
+[2023-05-02 07:15:05,466] INFO [64110-8178467136] Started server process [64110]
+[2023-05-02 07:15:05,466] INFO [64110-8178467136] Waiting for application startup.
+[2023-05-02 07:15:05,466] INFO [64110-8178467136] Running envirnoment: development
+[2023-05-02 07:15:05,466] INFO [64110-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:05,743] INFO [64110-8178467136] Application startup complete.
+[2023-05-02 07:15:08,354] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:15:08,380] INFO [64110-8178467136] Shutting down
+[2023-05-02 07:15:08,483] INFO [64110-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:08,484] INFO [64110-8178467136] Application shutdown complete.
+[2023-05-02 07:15:08,484] INFO [64110-8178467136] Finished server process [64110]
+[2023-05-02 07:15:09,105] INFO [64111-8178467136] Started server process [64111]
+[2023-05-02 07:15:09,105] INFO [64111-8178467136] Waiting for application startup.
+[2023-05-02 07:15:09,106] INFO [64111-8178467136] Running envirnoment: development
+[2023-05-02 07:15:09,106] INFO [64111-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:09,397] INFO [64111-8178467136] Application startup complete.
+[2023-05-02 07:15:13,811] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:13,859] INFO [64111-8178467136] Shutting down
+[2023-05-02 07:15:13,962] INFO [64111-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:13,964] INFO [64111-8178467136] Application shutdown complete.
+[2023-05-02 07:15:13,964] INFO [64111-8178467136] Finished server process [64111]
+[2023-05-02 07:15:14,560] INFO [64114-8178467136] Started server process [64114]
+[2023-05-02 07:15:14,560] INFO [64114-8178467136] Waiting for application startup.
+[2023-05-02 07:15:14,560] INFO [64114-8178467136] Running envirnoment: development
+[2023-05-02 07:15:14,560] INFO [64114-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:14,843] INFO [64114-8178467136] Application startup complete.
+[2023-05-02 07:15:16,928] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:16,970] INFO [64114-8178467136] Shutting down
+[2023-05-02 07:15:17,073] INFO [64114-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:17,075] INFO [64114-8178467136] Application shutdown complete.
+[2023-05-02 07:15:17,075] INFO [64114-8178467136] Finished server process [64114]
+[2023-05-02 07:15:17,687] INFO [64115-8178467136] Started server process [64115]
+[2023-05-02 07:15:17,687] INFO [64115-8178467136] Waiting for application startup.
+[2023-05-02 07:15:17,687] INFO [64115-8178467136] Running envirnoment: development
+[2023-05-02 07:15:17,687] INFO [64115-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:17,968] INFO [64115-8178467136] Application startup complete.
+[2023-05-02 07:15:18,509] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:18,576] INFO [64115-8178467136] Shutting down
+[2023-05-02 07:15:18,678] INFO [64115-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:18,679] INFO [64115-8178467136] Application shutdown complete.
+[2023-05-02 07:15:18,679] INFO [64115-8178467136] Finished server process [64115]
+[2023-05-02 07:15:19,288] INFO [64116-8178467136] Started server process [64116]
+[2023-05-02 07:15:19,288] INFO [64116-8178467136] Waiting for application startup.
+[2023-05-02 07:15:19,288] INFO [64116-8178467136] Running envirnoment: development
+[2023-05-02 07:15:19,288] INFO [64116-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:19,573] INFO [64116-8178467136] Application startup complete.
+[2023-05-02 07:15:21,380] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:21,397] INFO [64116-8178467136] Shutting down
+[2023-05-02 07:15:21,499] INFO [64116-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:21,501] INFO [64116-8178467136] Application shutdown complete.
+[2023-05-02 07:15:21,501] INFO [64116-8178467136] Finished server process [64116]
+[2023-05-02 07:15:22,144] INFO [64117-8178467136] Started server process [64117]
+[2023-05-02 07:15:22,144] INFO [64117-8178467136] Waiting for application startup.
+[2023-05-02 07:15:22,144] INFO [64117-8178467136] Running envirnoment: development
+[2023-05-02 07:15:22,144] INFO [64117-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:22,428] INFO [64117-8178467136] Application startup complete.
+[2023-05-02 07:15:25,009] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:25,063] INFO [64117-8178467136] Shutting down
+[2023-05-02 07:15:25,166] INFO [64117-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:25,167] INFO [64117-8178467136] Application shutdown complete.
+[2023-05-02 07:15:25,167] INFO [64117-8178467136] Finished server process [64117]
+[2023-05-02 07:15:25,786] INFO [64118-8178467136] Started server process [64118]
+[2023-05-02 07:15:25,786] INFO [64118-8178467136] Waiting for application startup.
+[2023-05-02 07:15:25,786] INFO [64118-8178467136] Running envirnoment: development
+[2023-05-02 07:15:25,786] INFO [64118-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:26,084] INFO [64118-8178467136] Application startup complete.
+[2023-05-02 07:15:28,922] WARNING [64086-8178467136] StatReload detected changes in 'predict.py'. Reloading...
+[2023-05-02 07:15:29,024] INFO [64118-8178467136] Shutting down
+[2023-05-02 07:15:29,128] INFO [64118-8178467136] Waiting for application shutdown.
+[2023-05-02 07:15:29,129] INFO [64118-8178467136] Application shutdown complete.
+[2023-05-02 07:15:29,129] INFO [64118-8178467136] Finished server process [64118]
+[2023-05-02 07:15:29,739] INFO [64119-8178467136] Started server process [64119]
+[2023-05-02 07:15:29,739] INFO [64119-8178467136] Waiting for application startup.
+[2023-05-02 07:15:29,739] INFO [64119-8178467136] Running envirnoment: development
+[2023-05-02 07:15:29,739] INFO [64119-8178467136] PyTorch using device: cpu
+[2023-05-02 07:15:30,013] INFO [64119-8178467136] Application startup complete.
+[2023-05-02 07:15:53,439] INFO [64119-6237401088] API predict called
+[2023-05-02 07:15:53,439] INFO [64119-6237401088] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:15:53,442] INFO [64119-6237401088] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:15:53,443] ERROR [64119-8178467136] Request info:
+{
+    "host": "127.0.0.1",
+    "method": "POST",
+    "url": "http://127.0.0.1:8080/api/v1/predict",
+    "headers": "Headers({'host': '127.0.0.1:8080', 'content-type': 'application/json', 'origin': 'http://127.0.0.1:8080', 'accept-encoding': 'gzip, deflate', 'connection': 'keep-alive', 'accept': 'application/json', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15', 'referer': 'http://127.0.0.1:8080/docs', 'content-length': '365', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'})",
+    "path_params": "{}",
+    "query_params": "",
+    "cookies": "{}"
+}
+[2023-05-02 07:15:53,444] INFO [64119-8178467136] 127.0.0.1:62273 - "POST /api/v1/predict HTTP/1.1" 500
+[2023-05-02 07:15:53,445] ERROR [64119-8178467136] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 429, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 86, in __call__
+    raise exc from None
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/uvicorn/middleware/message_logger.py", line 82, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/applications.py", line 276, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 255, in app
+    content = await serialize_response(
+  File "/Users/pepo_abdo/miniforge3/envs/mlenv/lib/python3.9/site-packages/fastapi/routing.py", line 141, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for InferenceResponse
+response -> results -> setosa
+  field required (type=value_error.missing)
+[2023-05-02 07:16:32,696] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:16:32,787] INFO [64119-8178467136] Shutting down
+[2023-05-02 07:16:32,889] INFO [64119-8178467136] Waiting for application shutdown.
+[2023-05-02 07:16:32,890] INFO [64119-8178467136] Application shutdown complete.
+[2023-05-02 07:16:32,890] INFO [64119-8178467136] Finished server process [64119]
+[2023-05-02 07:16:33,514] INFO [64124-8178467136] Started server process [64124]
+[2023-05-02 07:16:33,514] INFO [64124-8178467136] Waiting for application startup.
+[2023-05-02 07:16:33,514] INFO [64124-8178467136] Running envirnoment: development
+[2023-05-02 07:16:33,514] INFO [64124-8178467136] PyTorch using device: cpu
+[2023-05-02 07:16:33,802] INFO [64124-8178467136] Application startup complete.
+[2023-05-02 07:16:34,598] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:16:34,612] INFO [64124-8178467136] Shutting down
+[2023-05-02 07:16:34,714] INFO [64124-8178467136] Waiting for application shutdown.
+[2023-05-02 07:16:34,716] INFO [64124-8178467136] Application shutdown complete.
+[2023-05-02 07:16:34,716] INFO [64124-8178467136] Finished server process [64124]
+[2023-05-02 07:16:35,321] INFO [64125-8178467136] Started server process [64125]
+[2023-05-02 07:16:35,321] INFO [64125-8178467136] Waiting for application startup.
+[2023-05-02 07:16:35,321] INFO [64125-8178467136] Running envirnoment: development
+[2023-05-02 07:16:35,321] INFO [64125-8178467136] PyTorch using device: cpu
+[2023-05-02 07:16:35,600] INFO [64125-8178467136] Application startup complete.
+[2023-05-02 07:16:36,146] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:16:36,209] INFO [64125-8178467136] Shutting down
+[2023-05-02 07:16:36,311] INFO [64125-8178467136] Waiting for application shutdown.
+[2023-05-02 07:16:36,312] INFO [64125-8178467136] Application shutdown complete.
+[2023-05-02 07:16:36,313] INFO [64125-8178467136] Finished server process [64125]
+[2023-05-02 07:16:36,924] INFO [64126-8178467136] Started server process [64126]
+[2023-05-02 07:16:36,925] INFO [64126-8178467136] Waiting for application startup.
+[2023-05-02 07:16:36,925] INFO [64126-8178467136] Running envirnoment: development
+[2023-05-02 07:16:36,925] INFO [64126-8178467136] PyTorch using device: cpu
+[2023-05-02 07:16:37,201] INFO [64126-8178467136] Application startup complete.
+[2023-05-02 07:16:42,918] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:16:42,978] INFO [64126-8178467136] Shutting down
+[2023-05-02 07:16:43,080] INFO [64126-8178467136] Waiting for application shutdown.
+[2023-05-02 07:16:43,081] INFO [64126-8178467136] Application shutdown complete.
+[2023-05-02 07:16:43,081] INFO [64126-8178467136] Finished server process [64126]
+[2023-05-02 07:16:43,687] INFO [64127-8178467136] Started server process [64127]
+[2023-05-02 07:16:43,688] INFO [64127-8178467136] Waiting for application startup.
+[2023-05-02 07:16:43,688] INFO [64127-8178467136] Running envirnoment: development
+[2023-05-02 07:16:43,688] INFO [64127-8178467136] PyTorch using device: cpu
+[2023-05-02 07:16:43,986] INFO [64127-8178467136] Application startup complete.
+[2023-05-02 07:16:44,504] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:16:44,597] INFO [64127-8178467136] Shutting down
+[2023-05-02 07:16:44,699] INFO [64127-8178467136] Waiting for application shutdown.
+[2023-05-02 07:16:44,700] INFO [64127-8178467136] Application shutdown complete.
+[2023-05-02 07:16:44,700] INFO [64127-8178467136] Finished server process [64127]
+[2023-05-02 07:16:45,290] INFO [64130-8178467136] Started server process [64130]
+[2023-05-02 07:16:45,290] INFO [64130-8178467136] Waiting for application startup.
+[2023-05-02 07:16:45,290] INFO [64130-8178467136] Running envirnoment: development
+[2023-05-02 07:16:45,290] INFO [64130-8178467136] PyTorch using device: cpu
+[2023-05-02 07:16:45,593] INFO [64130-8178467136] Application startup complete.
+[2023-05-02 07:17:14,950] WARNING [64086-8178467136] StatReload detected changes in 'schema.py'. Reloading...
+[2023-05-02 07:17:14,957] INFO [64130-8178467136] Shutting down
+[2023-05-02 07:17:15,059] INFO [64130-8178467136] Waiting for application shutdown.
+[2023-05-02 07:17:15,060] INFO [64130-8178467136] Application shutdown complete.
+[2023-05-02 07:17:15,061] INFO [64130-8178467136] Finished server process [64130]
+[2023-05-02 07:17:15,666] INFO [64135-8178467136] Started server process [64135]
+[2023-05-02 07:17:15,666] INFO [64135-8178467136] Waiting for application startup.
+[2023-05-02 07:17:15,666] INFO [64135-8178467136] Running envirnoment: development
+[2023-05-02 07:17:15,666] INFO [64135-8178467136] PyTorch using device: cpu
+[2023-05-02 07:17:15,961] INFO [64135-8178467136] Application startup complete.
+[2023-05-02 07:17:27,132] INFO [64135-6245396480] API predict called
+[2023-05-02 07:17:27,132] INFO [64135-6245396480] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-02 07:17:27,135] INFO [64135-6245396480] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-02 07:17:27,136] INFO [64135-8178467136] 127.0.0.1:62282 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-02 07:21:01,569] INFO [64135-8178467136] Shutting down
+[2023-05-02 07:21:01,671] INFO [64135-8178467136] Waiting for application shutdown.
+[2023-05-02 07:21:01,672] INFO [64135-8178467136] Application shutdown complete.
+[2023-05-02 07:21:01,673] INFO [64135-8178467136] Finished server process [64135]
+[2023-05-02 07:21:01,799] INFO [64086-8178467136] Stopping reloader process [64086]
+[2023-05-03 21:49:29,464] INFO [70352-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying_LBP/app']
+[2023-05-03 21:49:29,464] WARNING [70352-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-03 21:49:29,465] INFO [70352-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-03 21:49:29,465] INFO [70352-8178467136] Started reloader process [70352] using StatReload
+[2023-05-03 21:49:30,484] INFO [70356-8178467136] Started server process [70356]
+[2023-05-03 21:49:30,485] INFO [70356-8178467136] Waiting for application startup.
+[2023-05-03 21:49:30,485] INFO [70356-8178467136] Running envirnoment: development
+[2023-05-03 21:49:30,485] INFO [70356-8178467136] PyTorch using device: cpu
+[2023-05-03 21:49:30,941] INFO [70356-8178467136] Application startup complete.
+[2023-05-03 21:49:52,954] INFO [70356-8178467136] 127.0.0.1:64127 - "GET / HTTP/1.1" 404
+[2023-05-03 21:49:58,480] INFO [70356-8178467136] 127.0.0.1:64128 - "GET /docs HTTP/1.1" 200
+[2023-05-03 21:49:58,603] INFO [70356-8178467136] 127.0.0.1:64128 - "GET /openapi.json HTTP/1.1" 200
+[2023-05-03 21:50:04,808] INFO [70356-6238941184] API predict called
+[2023-05-03 21:50:04,808] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 21:50:04,817] INFO [70356-6238941184] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 21:50:04,818] INFO [70356-8178467136] 127.0.0.1:64129 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 21:50:07,662] INFO [70356-6238941184] API predict called
+[2023-05-03 21:50:07,662] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 21:50:07,666] INFO [70356-6238941184] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 21:50:07,668] INFO [70356-8178467136] 127.0.0.1:64129 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 21:50:17,348] INFO [70356-6238941184] API predict called
+[2023-05-03 21:50:17,348] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 21:50:17,350] INFO [70356-6238941184] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 21:50:17,351] INFO [70356-8178467136] 127.0.0.1:64130 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:07:05,808] INFO [70356-6238941184] API predict called
+[2023-05-03 22:07:05,808] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=15.7484 cervical_tilt=1.51707 sacrum_angle=-15.728927 scoliosis_slope=1.5472
+[2023-05-03 22:07:05,810] INFO [70356-6238941184] results: {'logits': array([0.02676303], dtype=float32)}
+[2023-05-03 22:07:05,811] INFO [70356-8178467136] 127.0.0.1:64143 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:07:27,001] INFO [70356-6238941184] API predict called
+[2023-05-03 22:07:27,002] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-7.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=15.7484 cervical_tilt=1.51707 sacrum_angle=-15.728927 scoliosis_slope=1.5472
+[2023-05-03 22:07:27,003] INFO [70356-6238941184] results: {'logits': array([0.01775709], dtype=float32)}
+[2023-05-03 22:07:27,004] INFO [70356-8178467136] 127.0.0.1:64144 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:07:55,572] INFO [70356-6238941184] API predict called
+[2023-05-03 22:07:55,572] INFO [70356-6238941184] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=6.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:07:55,574] INFO [70356-6238941184] results: {'logits': array([0.64628476], dtype=float32)}
+[2023-05-03 22:07:55,574] INFO [70356-8178467136] 127.0.0.1:64146 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:08:15,045] INFO [70356-8178467136] Shutting down
+[2023-05-03 22:08:15,148] INFO [70356-8178467136] Waiting for application shutdown.
+[2023-05-03 22:08:15,149] INFO [70356-8178467136] Application shutdown complete.
+[2023-05-03 22:08:15,149] INFO [70356-8178467136] Finished server process [70356]
+[2023-05-03 22:08:15,293] INFO [70352-8178467136] Stopping reloader process [70352]
+[2023-05-03 22:26:39,897] INFO [71801-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying_LBP/app']
+[2023-05-03 22:26:39,898] WARNING [71801-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-03 22:26:39,898] INFO [71801-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-03 22:26:39,898] INFO [71801-8178467136] Started reloader process [71801] using StatReload
+[2023-05-03 22:26:40,709] INFO [71803-8178467136] Started server process [71803]
+[2023-05-03 22:26:40,710] INFO [71803-8178467136] Waiting for application startup.
+[2023-05-03 22:26:40,710] INFO [71803-8178467136] Running envirnoment: development
+[2023-05-03 22:26:40,710] INFO [71803-8178467136] PyTorch using device: cpu
+[2023-05-03 22:26:41,159] INFO [71803-8178467136] Application startup complete.
+[2023-05-03 22:26:48,750] INFO [71803-8178467136] Shutting down
+[2023-05-03 22:26:48,852] INFO [71803-8178467136] Waiting for application shutdown.
+[2023-05-03 22:26:48,853] INFO [71803-8178467136] Application shutdown complete.
+[2023-05-03 22:26:48,853] INFO [71803-8178467136] Finished server process [71803]
+[2023-05-03 22:26:48,991] INFO [71801-8178467136] Stopping reloader process [71801]
+[2023-05-03 22:40:42,720] INFO [72679-8178467136] Will watch for changes in these directories: ['/Users/pepo_abdo/Desktop/ml/Deep Learning/Low_Back_Pain_Detection/deploying_LBP/app']
+[2023-05-03 22:40:42,720] WARNING [72679-8178467136] "workers" flag is ignored when reloading is enabled.
+[2023-05-03 22:40:42,721] INFO [72679-8178467136] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2023-05-03 22:40:42,721] INFO [72679-8178467136] Started reloader process [72679] using StatReload
+[2023-05-03 22:40:43,652] INFO [72681-8178467136] Started server process [72681]
+[2023-05-03 22:40:43,652] INFO [72681-8178467136] Waiting for application startup.
+[2023-05-03 22:40:43,652] INFO [72681-8178467136] Running envirnoment: development
+[2023-05-03 22:40:43,652] INFO [72681-8178467136] PyTorch using device: cpu
+[2023-05-03 22:40:44,120] INFO [72681-8178467136] Application startup complete.
+[2023-05-03 22:40:57,749] INFO [72681-8178467136] 127.0.0.1:64438 - "GET / HTTP/1.1" 404
+[2023-05-03 22:41:08,346] INFO [72681-8178467136] 127.0.0.1:64440 - "GET /docs HTTP/1.1" 200
+[2023-05-03 22:41:08,470] INFO [72681-8178467136] 127.0.0.1:64440 - "GET /openapi.json HTTP/1.1" 200
+[2023-05-03 22:41:24,542] INFO [72681-8178467136] 127.0.0.1:64442 - "GET /about HTTP/1.1" 200
+[2023-05-03 22:41:27,596] INFO [72681-8178467136] 127.0.0.1:64442 - "GET /about HTTP/1.1" 200
+[2023-05-03 22:41:39,611] INFO [72681-6232731648] API predict called
+[2023-05-03 22:41:39,613] INFO [72681-6232731648] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:41:39,637] INFO [72681-6232731648] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 22:41:39,639] INFO [72681-8178467136] 127.0.0.1:64445 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:41:42,236] INFO [72681-6232731648] API predict called
+[2023-05-03 22:41:42,236] INFO [72681-6232731648] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:41:42,238] INFO [72681-6232731648] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 22:41:42,240] INFO [72681-8178467136] 127.0.0.1:64445 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:44:19,334] INFO [72681-6232731648] API predict called
+[2023-05-03 22:44:19,336] INFO [72681-6232731648] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:44:19,340] INFO [72681-6232731648] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 22:44:19,341] INFO [72681-8178467136] 127.0.0.1:64453 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:44:20,972] INFO [72681-6232731648] API predict called
+[2023-05-03 22:44:20,973] INFO [72681-6232731648] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:44:20,976] INFO [72681-6232731648] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 22:44:20,979] INFO [72681-8178467136] 127.0.0.1:64453 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:44:34,748] INFO [72681-6232731648] API predict called
+[2023-05-03 22:44:34,748] INFO [72681-6232731648] input: pelvic_incidence=47.903565 pelvic_tilt=13.616688 lumbar_lordosis_angle=36.0 sacral_slope=34.286877 pelvic_radius=117.449062 degree_spondylolisthesis=-4.245395 pelvic_slope=0.129744 direct_tilt=7.8433 thoracic_slope=14.7484 cervical_tilt=8.51707 sacrum_angle=-15.728927 scoliosis_slope=11.5472
+[2023-05-03 22:44:34,751] INFO [72681-6232731648] results: {'logits': array([0.18068026], dtype=float32)}
+[2023-05-03 22:44:34,752] INFO [72681-8178467136] 127.0.0.1:64460 - "POST /api/v1/predict HTTP/1.1" 200
+[2023-05-03 22:46:10,719] INFO [72681-8178467136] Shutting down
+[2023-05-03 22:46:10,823] INFO [72681-8178467136] Waiting for application shutdown.
+[2023-05-03 22:46:10,825] INFO [72681-8178467136] Application shutdown complete.
+[2023-05-03 22:46:10,825] INFO [72681-8178467136] Finished server process [72681]
+[2023-05-03 22:46:10,997] INFO [72679-8178467136] Stopping reloader process [72679]

@@ -1,0 +1,10 @@
+gunicorn
+uvicorn
+fastapi
+pandas
+numpy
+scikit-learn
+jieba
+pytest
+torch
+pytest-html
